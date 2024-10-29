@@ -56,7 +56,7 @@ export async function run(hazel, core, hold) {
       return;
     }
 
-    if (!command.moduleType === 'ws-command') {
+    if (command.moduleType !== 'ws-command') {
       core.replyMalformedCommand(socket);
       return;
     }
